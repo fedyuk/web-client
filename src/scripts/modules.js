@@ -264,6 +264,29 @@ define(['angular', 'config'], function (angular, config) {
 			controllerUrl: 'modules/acd/acd.js',
 			method: "edit"
 		}]
+	},
+	{
+		href: "#/oq",
+		caption: "OQ",
+
+		acl: 'cc/queue',
+		templateUrl: 'modules/oq/oq.html',
+		controller: 'OQCtrl',
+		controllerUrl: 'modules/oq/oq.js',
+		iconClass: 'fa fa-upload',
+		routes: [{
+			href: '/oq/new',
+			templateUrl: 'modules/oq/oqPage.html',
+			controller: 'OQCtrl',
+			controllerUrl: 'modules/oq/oq.js',
+			method: "create"
+		},{
+			href: '/oq/:id/edit',
+			templateUrl: 'modules/oq/oqPage.html',
+			controller: 'OQCtrl',
+			controllerUrl: 'modules/oq/oq.js',
+			method: "edit"
+		}]
 	}
 	]);
 });
